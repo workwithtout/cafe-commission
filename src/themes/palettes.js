@@ -1,0 +1,193 @@
+// Built-in theme "asset packs": palette + fonts + decorative motif. The actual drawings for each
+// motif live in components/Decor.jsx (MOTIFS). A theme row in the database can override any value
+// (config.vars, config.fonts, config.bg_image_url, config.sticker_urls ...).
+
+const base = {
+  '--paper': '#fffaf2',
+  '--paper2': '#fff0e2',
+  '--butter': '#ffe08a',
+  '--lace': '#ffffff',
+  '--status-butter': '#ffe9a8',
+  '--status-sky': '#cfe5ff',
+  '--status-lilac': '#e5d9ff',
+  '--status-peach': '#ffd9c2',
+  '--status-grey': '#e4dcd6',
+  '--status-mint': '#c9f2d9',
+  '--status-rose': '#ffd0d6',
+  // text on a --c-main button / active tab (white on most themes; a light-coloured theme sets a dark one)
+  '--on-main': '#ffffff',
+  '--on-main-shadow': '1px 1px 0 var(--ink)',
+};
+
+export const PALETTES = {
+  strawberry: {
+    ...base,
+    '--bg': '#fde6ec',
+    '--check': '255,176,196',
+    '--c-main': '#ff8fab',
+    '--c-main-dark': '#d9486f',
+    '--c-main-soft': '#ffcadb',
+    '--c-cream': '#fff1d6',
+    '--c-accent': '#ffb3c8',
+    '--ribbon': '#ff9cb8',
+    '--ribbon-hi': '#ffd2de',
+    '--ribbon-dark': '#e0587d',
+    '--leaf': '#8fd18c',
+    '--awning-a': '#fff4dc',
+    '--awning-b': '#ff9bb5',
+    '--frame': '#a4604f',
+    '--ink': '#5a3733',
+    '--text': '#4a2d29',
+    '--muted': '#8b6760',
+    '--link': '#c2185b',
+  },
+  matcha: {
+    ...base,
+    '--paper': '#fbfaf0',
+    '--paper2': '#f2f3df',
+    '--bg': '#e9f0da',
+    '--check': '168,204,138',
+    '--c-main': '#8fbf6a',
+    '--c-main-dark': '#4f7f3a',
+    '--c-main-soft': '#d2e8b8',
+    '--c-cream': '#f7f4dc',
+    '--c-accent': '#c4e0a4',
+    '--ribbon': '#7fb48c',
+    '--ribbon-hi': '#c3e4c9',
+    '--ribbon-dark': '#4f8a63',
+    '--leaf': '#6fae5f',
+    '--awning-a': '#f7f4dc',
+    '--awning-b': '#8fbf6a',
+    '--frame': '#6b7f4f',
+    '--ink': '#3d4a30',
+    '--text': '#33402a',
+    '--muted': '#6c7a5c',
+    '--link': '#2f6f3e',
+  },
+  chocolate: {
+    ...base,
+    '--paper': '#fff7ee',
+    '--paper2': '#f7e8da',
+    '--bg': '#f0e1d6',
+    '--check': '198,152,122',
+    '--c-main': '#8d5b45',
+    '--c-main-dark': '#5a3426',
+    '--c-main-soft': '#dcbca5',
+    '--c-cream': '#fbeedd',
+    '--c-accent': '#c99a80',
+    '--ribbon': '#8d5b45',
+    '--ribbon-hi': '#c79a82',
+    '--ribbon-dark': '#5a3426',
+    '--leaf': '#a98c5a',
+    '--awning-a': '#fbeedd',
+    '--awning-b': '#8d5b45',
+    '--frame': '#5c3a2c',
+    '--ink': '#47291f',
+    '--text': '#3f261d',
+    '--muted': '#85604f',
+    '--link': '#7a3b24',
+  },
+  blue: {
+    ...base,
+    '--paper': '#fbfdff',
+    '--paper2': '#eaf3fc',
+    '--bg': '#e1effc',
+    '--check': '140,190,238',
+    '--c-main': '#2f78c4',
+    '--c-main-dark': '#1f5aa0',
+    '--c-main-soft': '#cfe4f8',
+    '--c-cream': '#f1f8ff',
+    '--c-accent': '#9cc7ee',
+    '--ribbon': '#5aa0e0',
+    '--ribbon-hi': '#d3e6f9',
+    '--ribbon-dark': '#2b6cb0',
+    '--leaf': '#7cc4b8',
+    '--awning-a': '#f1f8ff',
+    '--awning-b': '#4a90d9',
+    '--frame': '#3d5f86',
+    '--ink': '#1f3552',
+    '--text': '#1b2f4a',
+    '--muted': '#4f6684',
+    '--link': '#1b64b8',
+  },
+  yellow: {
+    ...base,
+    '--paper': '#fffdf2',
+    '--paper2': '#fff4cf',
+    '--bg': '#fff1b8',
+    '--check': '255,208,84',
+    '--c-main': '#f5b800',
+    '--c-main-dark': '#a86f00',
+    '--c-main-soft': '#ffe7a3',
+    '--c-cream': '#fff9e0',
+    '--c-accent': '#ffd54f',
+    '--ribbon': '#f5b800',
+    '--ribbon-hi': '#ffe39a',
+    '--ribbon-dark': '#b57c00',
+    '--leaf': '#8fbf5a',
+    '--awning-a': '#fff9e0',
+    '--awning-b': '#f5b800',
+    '--frame': '#7d5a00',
+    '--ink': '#3b2a00',
+    '--text': '#33250a',
+    '--muted': '#6a5320',
+    '--link': '#8a4b00',
+    '--on-main': '#3b2a00',          // dark text on the yellow buttons (white would be unreadable)
+    '--on-main-shadow': 'none',
+  },
+  oreo: {
+    ...base,
+    '--paper': '#fbf8f0',
+    '--paper2': '#ece9df',
+    '--bg': '#1d2b4f',
+    '--check': '58,78,128',
+    '--c-main': '#1f2f5c',
+    '--c-main-dark': '#111b3a',
+    '--c-main-soft': '#d7dbe5',
+    '--c-cream': '#f6f2e7',
+    '--c-accent': '#aeb6c8',
+    '--ribbon': '#2c3f78',
+    '--ribbon-hi': '#cfd5e6',
+    '--ribbon-dark': '#111b3a',
+    '--leaf': '#8a94ad',
+    '--awning-a': '#f6f2e7',
+    '--awning-b': '#1f2f5c',
+    '--frame': '#0f1830',
+    '--ink': '#0e1730',
+    '--text': '#111a33',
+    '--muted': '#4a5777',
+    '--link': '#1f3c8f',
+  },
+};
+
+export const DEFAULT_FONTS = {
+  display: 'Mali',
+  body: 'Noto Sans Thai Looped',
+  label: 'Itim',
+};
+
+export const FONT_CHOICES = {
+  display: ['Mali', 'Sriracha', 'Itim', 'Mitr'],
+  label: ['Itim', 'Mitr', 'Mali', 'Sriracha'],
+  body: ['Noto Sans Thai Looped', 'Mali'],
+};
+
+// What "Reset to default" returns a theme to. The 6 built-in themes go back to exactly what they were
+// when installed; any other theme goes back to the plain default of its own decoration world.
+export const THEME_DEFAULTS = {
+  strawberry: { motif: 'strawberry', fonts: { display: 'Mali', label: 'Itim' }, sfx_pitch: 1 },
+  matcha: { motif: 'matcha', fonts: { display: 'Mali', label: 'Mitr' }, sfx_pitch: 0.84 },
+  chocolate: { motif: 'chocolate', fonts: { display: 'Sriracha', label: 'Itim' }, sfx_pitch: 0.7 },
+  blue: { motif: 'blue', fonts: { display: 'Mali', label: 'Itim' }, sfx_pitch: 1.1 },
+  yellow: { motif: 'yellow', fonts: { display: 'Mali', label: 'Itim' }, sfx_pitch: 1.2 },
+  oreo: { motif: 'oreo', fonts: { display: 'Mali', label: 'Mitr' }, sfx_pitch: 0.9 },
+};
+
+export function defaultsForTheme(theme, fallbackMotif = 'strawberry') {
+  const builtin = theme?.is_builtin && THEME_DEFAULTS[theme.slug];
+  if (builtin) return builtin;
+  const motif = (theme?.config?.motif && PALETTES[theme.config.motif]) ? theme.config.motif : fallbackMotif;
+  return { motif, fonts: { display: DEFAULT_FONTS.display, label: DEFAULT_FONTS.label }, sfx_pitch: 1 };
+}
+
+export const MOTIF_KEYS = ['strawberry', 'matcha', 'chocolate', 'blue', 'yellow', 'oreo'];
