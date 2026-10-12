@@ -128,6 +128,11 @@
 - 🍓 Strawberry
 - 🍵 Matcha
 - 🍫 Chocolate
+- 💙 Blue cafe
+- 💛 Sun cafe
+- 🔳 Orio
+
+
 
 สามารถปรับสีและฟอนต์เพิ่มเติมได้
 
